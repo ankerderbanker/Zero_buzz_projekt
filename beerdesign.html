@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beer Designer</title>
+    <link rel="stylesheet" href="css/beerdesign.css">
+</head>
+<body>
+
+
+
+<nav class="navbar">
+    <div class="logo">
+        <img src="images/logozerobuzz.png" alt="Zero Buzz Logo">
+    </div>
+    <ul class="nav-links">
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Om Os</a></li>
+        <li><a href="#">Fællesskab</a></li>
+    </ul>
+    <div class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+    </div>
+</nav>
+
+
+
+<div class="PageWrapper">
+
+    <h1>ZERO BUZZ BREW</h1>
+
+    <div class="DesignFlexWrapper">
+
+        <!-- Øl billede -->
+        <div class="BeerContainer">
+            <img class="beerimg" id="beerImage" src="images/zerobuzzimg.png" alt="Øl billede">
+        </div>
+
+        <!-- Valgmuligheder -->
+        <div class="SelectionWrapper">
+            
+            <!-- Smagsvalg -->
+            <div class="FlavorSelection">
+                <h2>Vælg din smag</h2>
+                <button class="flavor-btn" data-flavor="citrus">
+                    <img src="images/kornsmag.png" alt="Citrus"> Citrus
+                </button>
+                <button class="flavor-btn" data-flavor="berry">
+                    <img src="images/kornsmag.png" alt="Bær"> Bær
+                </button>
+                <button class="flavor-btn" data-flavor="wheat">
+                    <img src="images/kornsmag.png" alt="Hvede"> Hvede
+                </button>
+            </div>
+
+
+
+
+            <div class="selectorflexbox">
+
+                   <!-- Citatvalg -->
+            <div class="QuoteSelection">
+                <h2>Vælg et citat</h2>
+                <select id="quoteSelect">
+                    <option value="1">Jeg Kører Hjem</option>
+                    <option value="2">Øl, fordi du fortjener det.</option>
+                    <option value="3">Skål for eventyr!</option>
+                </select>
+            </div>
+
+            <!-- Antal valg -->
+            <div class="QuantitySelection">
+                <h2>Vælg antal</h2>
+                <select id="quantitySelect">
+                    <option value="1">1x</option>
+                    <option value="3">3x</option>
+                    <option value="6">6x</option>
+                </select>
+            </div>
+
+            </div>
+         
+            <!-- Læg i kurv -->
+            <button id="addToCartBtn">Læg i kurv</button>
+
+        </div>
+
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let selectedFlavor = "citrus"; // Standard smag
+    let selectedQuote = "1"; // Standard citat
+    let selectedQuantity = "1"; // Standard antal
+
+    const beerImage = document.getElementById("beerImage");
+    const flavorButtons = document.querySelectorAll(".flavor-btn");
+    const quoteSelect = document.getElementById("quoteSelect");
+    const quantitySelect = document.getElementById("quantitySelect");
+    const addToCartBtn = document.getElementById("addToCartBtn");
+
+    // Funktion til at opdatere billedet
+    function updateBeerImage() {
+        const newImageSrc = `images/beer_${selectedFlavor}_quote${selectedQuote}.png`;
+        beerImage.src = newImageSrc;
+    }
+
+    // Event listeners for smagsvalg
+    flavorButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            selectedFlavor = this.getAttribute("data-flavor");
+            updateBeerImage();
+        });
+    });
+
+    // Event listener for citatvalg fra dropdown
+    quoteSelect.addEventListener("change", function () {
+        selectedQuote = this.value;
+        updateBeerImage();
+    });
+
+    // Event listener for antalvalg
+    quantitySelect.addEventListener("change", function () {
+        selectedQuantity = this.value;
+    });
+
+    // Event listener for "Læg i kurv"-knap
+    addToCartBtn.addEventListener("click", function () {
+        alert(`Du har tilføjet ${selectedQuantity} stk af øllen med smag: ${selectedFlavor} og citat nr. ${selectedQuote} til kurven.`);
+    });
+});
+</script>
+
+</body>
+</html>
