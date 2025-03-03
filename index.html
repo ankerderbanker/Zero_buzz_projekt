@@ -1,16 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beer Designer</title>
+    <link rel="stylesheet" href="css/css.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
 </head>
 <body>
 
+  <!-- Intro Video Section -->
+  <div class="intro-video">
+    <video autoplay muted loop id="intro-video">
+        <source src="data/video/animatic.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="overlay">
+        <h1>Zero Buzz Brew</h1>
+        <a href="#main-content" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+    </div>
+  </div>
 
+  <!-- Main Content (Navbar + Page Content) -->
+  <div id="main-content">
+      <nav class="navbar" id="navbar">
+          <div class="logo">
+              <img src="images/logonew1dark.png" alt="Zero Buzz Logo" id="logo">
+          </div>
+          <ul class="nav-links">
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Om Os</a></li>
+              <li><a href="#">Fællesskab</a></li>
+          </ul>
+          <div class="cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+          </div>
+      </nav>
+      
+      <div class="content">
+          <h2>Welcome to Zero Buzz Brew!</h2>
+          <p>Discover our collection of beers and much more.</p>
+      </div>
+  </div>
 
-
-  
-  
 </body>
 </html>

@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #faf9f6;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+    font-size: 30px;
+    color: #0a480b;
+    
+}
+h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    color: #0a480b;
+    
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #faf9f6;
+    padding: 15px 20px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    max-height: 90px;
+     border-bottom: solid rgb(207, 207, 207) 1px;
+}
+
+/* Logo placering */
+.navbar .logo {
+    display: flex;
+   height: 80px;
+   margin-top: 40px;
+   margin-bottom: 40px;
+  
+   
+}
+
+/* Menu links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin-left: 30px; /* Skubber menupunkterne tættere på logoet */
+
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #0d3e0e;
+    font-size: 30px;
+   
+    transition: color 0.3s;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+}
+
+.nav-links a:hover {
+    color: #233822;
+}
+
+/* Shopping cart placering */
+.cart-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto; /* Skubber ikonet helt til højre */
+}
+
+.cart-icon:hover {
+    color: #ffcc00;
+}
+
+.beerikon{
+    width: 30%;
+    position: relative;
+    top: 200px;
+}
+
+
+.slider{
+    top: 300px;
+    position: relative;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.arrow {
+    font-size: 30px;
+    cursor: pointer;
+    margin: 0 20px;
+    color: darkgreen;
+}
+
+.text {
+    font-size: 24px;
+    width: 500px;
+}

@@ -12,7 +12,7 @@
 
 <nav class="navbar">
     <div class="logo">
-        <img src="images/logozerobuzz.png" alt="Zero Buzz Logo">
+        <img src="images/logonew1dark.png" alt="Zero Buzz Logo">
     </div>
     <ul class="nav-links">
         <li><a href="#">Shop</a></li>
@@ -28,13 +28,14 @@
 
 <div class="PageWrapper">
 
-    <h1>ZERO BUZZ BREW</h1>
+    <h1>DESIGN DIN EGEN ZERO BUZZ BREW</h1>
 
     <div class="DesignFlexWrapper">
 
         <!-- Øl billede -->
         <div class="BeerContainer">
-            <img class="beerimg" id="beerImage" src="images/zerobuzzimg.png" alt="Øl billede">
+            <img class="beerimg" id="beerImage" src="images/ol/ol1hylde.png" alt="Øl billede">
+
         </div>
 
         <!-- Valgmuligheder -->
@@ -44,13 +45,16 @@
             <div class="FlavorSelection">
                 <h2>Vælg din smag</h2>
                 <button class="flavor-btn" data-flavor="citrus">
-                    <img src="images/kornsmag.png" alt="Citrus"> Citrus
+                    <img src="images/smagikoner/citrus.png" alt="Citrus"> Citrus
                 </button>
-                <button class="flavor-btn" data-flavor="berry">
-                    <img src="images/kornsmag.png" alt="Bær"> Bær
+                <button class="flavor-btn" data-flavor="appelsin">
+                    <img src="images/smagikoner/appelsin.png" alt="appelsin"> Appelsin
                 </button>
-                <button class="flavor-btn" data-flavor="wheat">
-                    <img src="images/kornsmag.png" alt="Hvede"> Hvede
+                <button class="flavor-btn" data-flavor="hylde">
+                    <img src="images/smagikoner/hyldeblomst.png" alt="hyldeblomst"> Hyldeblomst
+                </button>
+                <button class="flavor-btn" data-flavor="klassisk">
+                    <img src="images/smagikoner/klassiskol.png" alt="klassisk"> Klassisk
                 </button>
             </div>
 
@@ -61,11 +65,12 @@
 
                    <!-- Citatvalg -->
             <div class="QuoteSelection">
-                <h2>Vælg et citat</h2>
+                <h2>Vælg citat</h2>
                 <select id="quoteSelect">
-                    <option value="1">Jeg Kører Hjem</option>
-                    <option value="2">Øl, fordi du fortjener det.</option>
-                    <option value="3">Skål for eventyr!</option>
+                    <option value="1">Den smager godt</option>
+                    <option value="2">Jeg kan også uden</option>
+                    <option value="3">Jeg kører hjem</option>
+                    <option value="4">Jeg skal præstere</option>
                 </select>
             </div>
 
@@ -103,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Funktion til at opdatere billedet
     function updateBeerImage() {
-        const newImageSrc = `images/beer_${selectedFlavor}_quote${selectedQuote}.png`;
+        const newImageSrc = `images/ol/ol${selectedQuote}${selectedFlavor}.png`;
         beerImage.src = newImageSrc;
     }
 

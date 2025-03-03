@@ -1,0 +1,145 @@
+/* Intro Video */
+.intro-video {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen */
+    overflow: hidden;
+}
+
+#intro-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers the full screen */
+    object-position: center; /* Centers the video */
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    z-index: 10;
+}
+
+.overlay h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 60px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.scroll-down {
+    font-size: 40px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.scroll-down:hover {
+    color: #ffcc00;
+}
+
+/* Main Content (Navbar + Page Content) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #faf9f6;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #faf9f6;
+    padding: 15px 20px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+    width: 100%;
+    position: relative; /* Positioned normally */
+    margin-top: -1px; /* Ensure it stays immediately below the video */
+    z-index: 10;
+}
+
+/* Position the navbar directly below the video */
+#main-content {
+    margin-top: 0; /* Resetting margin-top */
+}
+
+/* Add a small gap below the video */
+.navbar {
+    margin-top: 10px; /* Adds a small gap below the video */
+}
+
+/* Logo placement */
+.navbar .logo {
+    display: flex;
+    height: 80px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #0d3e0e;
+    font-size: 30px;
+    transition: color 0.3s;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.nav-links a:hover {
+    color: #233822;
+}
+
+.cart-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.cart-icon:hover {
+    color: #ffcc00;
+}
+
+/* Content area */
+.content {
+    padding: 100px 20px 20px;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 25px;
+    color: #0a480b;
+}
+
+.content p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Mobile Responsiveness for Intro */
+@media (max-width: 768px) {
+    .overlay h1 {
+        font-size: 40px; /* Adjusting text size for smaller screens */
+    }
+
+    .scroll-down {
+        font-size: 30px; /* Adjusting arrow size for smaller screens */
+    }
+}
