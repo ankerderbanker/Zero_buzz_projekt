@@ -1,4 +1,9 @@
 /* Intro Video */
+
+html, body {
+    overflow-x: hidden;
+}
+
 .intro-video {
     position: relative;
     width: 100%;
@@ -83,9 +88,14 @@ html {
 /* Logo placement */
 .navbar .logo {
     display: flex;
-    height: 80px;
     margin-top: 40px;
     margin-bottom: 40px;
+
+}
+
+#logo {
+    width: 150px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .nav-links {
@@ -98,7 +108,7 @@ html {
 .nav-links a {
     text-decoration: none;
     color: #0d3e0e;
-    font-size: 30px;
+    font-size: 40px;
     transition: color 0.3s;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -142,4 +152,136 @@ html {
     .scroll-down {
         font-size: 30px; /* Adjusting arrow size for smaller screens */
     }
+}
+
+
+
+.beer-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 125px;
+    margin-bottom: 125px;
+    
+}
+
+
+
+/* The list of beer images */
+.beer-list {
+    display: flex;
+    animation: scrollBeers 15s linear infinite;
+}
+
+
+/* Style for each beer image */
+.beer-list img {
+    width: 150px;  /* Adjust size of each beer image */
+    margin-right: 250px;  /* Very small space between the images */
+}
+
+
+/* Animation for the scrolling effect */
+@keyframes scrollBeers {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111111;
+    padding: 20px;
+    box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left p {
+    margin: 0;
+    font-size: 16px;
+    color: #0d3e0e;
+}
+
+.footer-left a {
+    color: #0d3e0e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-left a:hover {
+    color: #ffcc00;
+}
+
+.footer-logo {
+    width: 120px; /* Adjust size as needed */
+    height: auto;
+}
+
+
+
+
+
+.cta-button {
+    background-color: #0d3e0e;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.cta-button:hover {
+    background-color: #233822;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 50px auto;
+    width: 80%;
+}
+
+.grid-item {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hashtag-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    color: white;
+    font-size: 14px;
 }

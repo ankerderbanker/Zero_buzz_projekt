@@ -10,8 +10,9 @@ body {
 h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 100;
-    font-size: 30px;
+    font-size: 40px;
     color: #0a480b;
+    margin-top: 60px;
     
 }
 h2 {
@@ -181,28 +182,20 @@ select {
     cursor: pointer;
     
 }
-
-/* Boks-styling */
    
-
-img[src="images/smagikoner/appelsin.png"],
-img[src="images/smagikoner/hyldeblomst.png"],
-img[src="images/smagikoner/klassiskol.png"],
-img[src="images/smagikoner/citrus.png"] {
-    width: 80px; /* Ens bredde */
-    height: 80px; /* Ens højde */
-    object-fit: contain; /* Sikrer at billedet bevarer sine proportioner */
-    filter: drop-shadow(2px 2px 3px rgba(61, 59, 59, 0.4)); /* Skygge kun omkring stregtegningen */
+/*styling for smagsikoner */
+.flavor-btn img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    filter: drop-shadow(2px 2px 3px rgba(61, 59, 59, 0.4));
     transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 /* Hover-effekt */
-img[src="images/smagikoner/appelsin.png"]:hover,
-img[src="images/smagikoner/hyldeblomst.png"]:hover,
-img[src="images/smagikoner/klassiskol.png"]:hover,
-img[src="images/smagikoner/citrus.png"]:hover {
-    filter: drop-shadow(3px 3px 4px rgba(61, 59, 59, 0.4)); /* Kraftigere skygge */
-    transform: scale(1.05); /* Lidt zoom-effekt */
+.flavor-btn:hover img {
+    filter: drop-shadow(3px 3px 4px rgba(61, 59, 59, 0.4));
+    transform: scale(1.05);
 }
 
 

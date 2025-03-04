@@ -26,10 +26,11 @@
   <div id="main-content">
       <nav class="navbar" id="navbar">
           <div class="logo">
-              <img src="images/logonew1dark.png" alt="Zero Buzz Logo" id="logo">
+              <a href="index.html"><img src="images/logonew1dark.png" alt="Zero Buzz Logo" id="logo"></a>
           </div>
+
           <ul class="nav-links">
-              <li><a href="#">Shop</a></li>
+              <li><a href="beerdesign.html">Shop</a></li>
               <li><a href="#">Om Os</a></li>
               <li><a href="#">Fællesskab</a></li>
           </ul>
@@ -41,8 +42,98 @@
       <div class="content">
           <h2>Welcome to Zero Buzz Brew!</h2>
           <p>Discover our collection of beers and much more.</p>
+          <button class="cta-button">Shop Now</button>
       </div>
+
+      <div class="beer-container">
+        <div class="beer-list">
+            <img src="images/ol/ol1appelsin.png" alt="appelsin">
+            <img src="images/ol/ol2appelsin.png" alt="Beer 2">
+            <img src="images/ol/ol3citrus.png" alt="Beer 3">
+            <img src="images/ol/ol2citrus.png" alt="Beer 4">
+            <img src="images/ol/ol4appelsin.png">
+            <img src="images/ol/ol3appelsin.png">
+            <img src="images/ol/ol4klassisk.png" alt="">
+            <img src="images/ol/ol3citrus.png" alt="">
+            <img src="images/ol/ol1appelsin.png" alt="appelsin">
+            <img src="images/ol/ol2appelsin.png" alt="Beer 2">
+            <img src="images/ol/ol3citrus.png" alt="Beer 3">
+            <img src="images/ol/ol2citrus.png" alt="Beer 4">
+            <img src="images/ol/ol4appelsin.png">
+            <img src="images/ol/ol3appelsin.png">
+            <img src="images/ol/ol4klassisk.png" alt="">
+            <img src="images/ol/ol3citrus.png" alt="">
+
+
+            <!-- Add more beer images as needed -->
+        </div>
+    </div>
+
+
+<!-- Grid of 8 Squares -->
+<div class="grid-container">
+    <!-- Instagram Images (Slideshow effect) -->
+    <div class="grid-item instagram">
+        <img src="images/baggrundshit.png" class="slideshow" alt="Instagram Post">
+        <div class="hashtag-overlay">#ZeroBuzz</div>
+    </div>
+    <div class="grid-item instagram">
+        <img src="images/logonew1dark.png" class="slideshow" alt="Instagram Post">
+        <div class="hashtag-overlay">#CraftedWithCare</div>
+    </div>
+    
+    <!-- Quote Boxes -->
+    <div class="grid-item quote" style="background-color: #ffcc00;">“Good beer, good times.”</div>
+    <div class="grid-item quote" style="background-color: #ff5733;">“No buzz, just flavor!”</div>
+    
+    <!-- More Instagram Images -->
+    <div class="grid-item instagram">
+        <img src="images/insta3.jpg" class="slideshow" alt="Instagram Post">
+        <div class="hashtag-overlay">#DrinkDifferent</div>
+    </div>
+    <div class="grid-item instagram">
+        <img src="images/insta4.jpg" class="slideshow" alt="Instagram Post">
+        <div class="hashtag-overlay">#ZeroAlcohol</div>
+    </div>
+    
+    <!-- More Quote Boxes -->
+    <div class="grid-item quote" style="background-color: #33b5e5;">“Refreshing and alcohol-free.”</div>
+    <div class="grid-item quote" style="background-color: #8e44ad;">“Join the Zero Buzz community!”</div>
+</div>
+
   </div>
 
+
 </body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let slides = document.querySelectorAll(".slideshow");
+        let currentIndex = 0;
+        
+        function changeSlide() {
+            slides.forEach(slide => slide.style.display = "none");
+            slides[currentIndex].style.display = "block";
+            currentIndex = (currentIndex + 1) % slides.length;
+        }
+        
+        setInterval(changeSlide, 3000); // Change every 3 seconds
+        changeSlide(); // Initialize
+    });
+</script>
+
+
+
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+        </div>
+        <div class="footer-right">
+            <img src="images/logonew1dark.png" alt="Zero Buzz Logo" class="footer-logo">
+        </div>
+    </div>
+</footer>
+
 </html>
