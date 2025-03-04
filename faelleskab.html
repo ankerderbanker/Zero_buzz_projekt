@@ -5,53 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faelleskab</title>
     <link rel="stylesheet" href="css/faelleskab.css">
+
+    <!--link til font-awesome - pilene -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    <!--link til font-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
 </head>
 <body>
 
 
 <header>    
-<nav class="navbar">
-    <div class="logo">
-        <img src="images/logonew1dark.png" alt="Zero Buzz Logo">
-    </div>
-    <ul class="nav-links">
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">Om Os</a></li>
-        <li><a href="#">Fællesskab</a></li>
-    </ul>
-    <div class="cart-icon">
-        <i class="fas fa-shopping-cart"></i>
-    </div>
-</nav>
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/logonew1dark.png" alt="Zero Buzz Logo" id="logo"></a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="beerdesign.html">Shop</a></li>
+            <li><a href="404.html">Om Os</a></li>
+            <li><a href="faelleskab.html">Fællesskab</a></li>
+        </ul>
+        <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </nav>
 </header>
 
 <section>
-    <img src="images/3dbeer.png" alt="beerikon" class="beerikon">
+    <h1> Sammenhold er vigtigere end alkohol </h1>
+    <img src="images/olhnderlang.png" alt="faelleskab" class="faelleskab">
+    <div class="pilned"><i class="fas fa-chevron-down"></i></div>
 </section>
 
-<section class="slider">
-<h1>10 gode grunde til at drikke <span style="color: darkgreen;">alkoholfri</span></h1>
+<section class="flexcontainer">
+    <img src="/images/ol/ol4klassisk.png" alt="ol1" class="ol1">
+    
+    <section class="slider">
+    <h2>10 gode grunde til at drikke alkoholfri</h1>
     <div class="container">
-        <div class="arrow" onclick="prevText()"><i class="fas fa-chevron-down"></i></div>
+        <div class="arrow" onclick="prevText()"><i class="fas fa-chevron-left"></i></div>
         <div class="text" id="text">1. Du vil ikke have tømmermænd dagen efter</div>
-        <div class="arrow" onclick="nextText()">&#9655;</div>
+        <div class="arrow" onclick="nextText()"><i class="fas fa-chevron-right"></i></div>
+    </div>
+    </section>
+    <img src="/images/ol/ol2citrus.png" alt="ol2" class="ol2">
+</section>
+
+
+<section class="community-section">
+    <div class="image-container">
+        <img src="images/karl.png" alt="eksempler"/>
+    </div>
+    <div class="text-box">
+        <p>
+            Karl havde valgt at droppe alkoholen. Ikke fordi han skulle, men fordi han ville huske aftenerne og være til stede. 
+            Først var han nervøs for at blive set som kedelig, men vennerne tog det overraskende godt. 
+            <br><br>
+            Han grinede lige så højt, dansede ligeså vildt og havde de bedste samtaler – nu bare uden hovedpine dagen efter. 
+            Han opdagede hurtigt, at det ikke var alkoholen, men fællesskabet, der gjorde aftenerne mindeværdige.
+        </p>
+        <p class="author">- Karl Lucas Cristiansen, 24</p>
+    </div>
+</section>
+
+<section class="community-section">
+    <div class="text-box">
+        <p>
+            Karl havde valgt at droppe alkoholen. Ikke fordi han skulle, men fordi han ville huske aftenerne og være til stede. 
+            Først var han nervøs for at blive set som kedelig, men vennerne tog det overraskende godt. 
+            <br><br>
+            Han grinede lige så højt, dansede ligeså vildt og havde de bedste samtaler – nu bare uden hovedpine dagen efter. 
+            Han opdagede hurtigt, at det ikke var alkoholen, men fællesskabet, der gjorde aftenerne mindeværdige.
+        </p>
+        <p class="author">- Karl Lucas Cristiansen, 24</p>
+    </div>
+    <div class="image-container">
+        <img src="images/laerke.png" alt="eksempler"/>
     </div>
 </section>
 
 
+<div>
+    <img src="" alt="infographic">
+
+</div>
+
 <script>
     const texts = [
-        "1. Du vil ikke have tømmermænd dagen efter",
+        "1. Ingen tømmermænd dagen efter",
         "2. Du sparer penge på drinks",
-        "3. Du kan køre hjem sikkert",
+        "3. Du kan køre sikkert hjem",
         "4. Du sover bedre om natten",
-        "5. Du føler dig frisk og energisk dagen efter",
+        "5. Du føler dig frisk dagen efter",
         "6. Din lever vil takke dig",
-        "7. Ingen pinlige fuldeskader",
+        "7. Ingen moralske tømmermænd",
         "8. Du vil huske hele aftenen",
-        "9. Bedre hydrering og ingen hovedpine",
-        "10. Det smager faktisk godt!"
+        "9. Du kan præstere bedre",
+        "10. Fordi Zero Buzz Brew er en upcoming trend!"
     ];
     
     let index = 0;

@@ -5,6 +5,8 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+   
+    transition: opacity 0.5s ease-in-out;
 }
 
 h1 {
@@ -31,56 +33,59 @@ h2 {
     background: #faf9f6;
     padding: 15px 20px;
     box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
-    position: fixed;
-    top: 0;
     width: 100%;
-    z-index: 100;
-    max-height: 90px;
-     border-bottom: solid rgb(207, 207, 207) 1px;
+    position: relative; /* Positioned normally */
+    margin-top: -1px; /* Ensure it stays immediately below the video */
+    z-index: 10;
 }
 
-/* Logo placering */
+/* Position the navbar directly below the video */
+#main-content {
+    margin-top: 0; /* Resetting margin-top */
+}
+
+/* Add a small gap below the video */
+.navbar {
+    margin-top: 10px; /* Adds a small gap below the video */
+}
+
+/* Logo placement */
 .navbar .logo {
     display: flex;
-   height: 80px;
-   margin-top: 40px;
-   margin-bottom: 40px;
-  
-   
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+
 }
 
-/* Menu links */
+#logo {
+    width: 100px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
 .nav-links {
     list-style: none;
     display: flex;
     gap: 50px;
-    margin-left: 30px; /* Skubber menupunkterne tættere på logoet */
-
-}
-
-.nav-links li {
-    display: inline;
+    margin-left: 30px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #0d3e0e;
-    font-size: 30px;
-   
+    font-size: 40px;
     transition: color 0.3s;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 100;
 }
 
 .nav-links a:hover {
     color: #233822;
 }
 
-/* Shopping cart placering */
 .cart-icon {
     font-size: 24px;
     cursor: pointer;
-    margin-left: auto; /* Skubber ikonet helt til højre */
+    margin-left: auto;
 }
 
 .cart-icon:hover {

@@ -4,6 +4,7 @@ html, body {
     overflow-x: hidden;
 }
 
+
 .intro-video {
     position: relative;
     width: 100%;
@@ -34,15 +35,17 @@ html, body {
 .overlay h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 60px;
-    color: #fff;
+    color: #325031;
     margin-bottom: 20px;
+   
 }
 
 .scroll-down {
     font-size: 40px;
-    color: #fff;
+    color: #325031;
     text-decoration: none;
     transition: color 0.3s;
+    box-shadow: #faf9f6 ;
 }
 
 .scroll-down:hover {
@@ -82,7 +85,7 @@ html {
 
 /* Add a small gap below the video */
 .navbar {
-    margin-top: 10px; /* Adds a small gap below the video */
+    margin-top: 0; /* Adds a small gap below the video */
 }
 
 /* Logo placement */
@@ -90,11 +93,11 @@ html {
     display: flex;
     margin-top: 40px;
     margin-bottom: 40px;
-
+    margin-left: 40px;
 }
 
 #logo {
-    width: 150px; /* Adjust width as needed */
+    width: 100px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
 }
 
@@ -107,7 +110,7 @@ html {
 
 .nav-links a {
     text-decoration: none;
-    color: #0d3e0e;
+    color: #325031;
     font-size: 40px;
     transition: color 0.3s;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;

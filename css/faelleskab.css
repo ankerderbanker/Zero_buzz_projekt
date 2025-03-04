@@ -4,20 +4,27 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
+
+
+
 
 h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 100;
-    font-size: 30px;
+    font-size: 50px;
+    margin-top: 200px;
+    margin-bottom: -140px;
     color: #0a480b;
     
 }
 h2 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 100;
-    font-size: 15px;
+    font-size: 40px;
     color: #0a480b;
+    margin-top: -100px;
     
 }
 
@@ -27,74 +34,103 @@ h2 {
     justify-content: space-between;
     align-items: center;
     background: #faf9f6;
-    padding: 15px 20px;
+    padding: 15px 20px;  /* Du kan justere værdierne her for at få plads */
     box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
-    position: fixed;
-    top: 0;
     width: 100%;
-    z-index: 100;
-    max-height: 90px;
-     border-bottom: solid rgb(207, 207, 207) 1px;
+    position: relative; /* Positioned normally */
+    margin-top: -1px;
+    z-index: 10;
+    padding-left: 20px; /* Hvis du har problemer med at få plads til ikonet */
+    padding-right: 20px; /* For ekstra plads til højre */
 }
 
-/* Logo placering */
+/* Position the navbar directly below the video */
+#main-content {
+    margin-top: 0;
+}
+
+/* Add a small gap below the video */
+.navbar {
+    margin-top: 0; 
+}
+
+/* Logo placement */
 .navbar .logo {
     display: flex;
-   height: 80px;
-   margin-top: 40px;
-   margin-bottom: 40px;
-  
-   
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+
 }
 
-/* Menu links */
+#logo {
+    width: 100px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
 .nav-links {
     list-style: none;
     display: flex;
     gap: 50px;
-    margin-left: 30px; /* Skubber menupunkterne tættere på logoet */
-
-}
-
-.nav-links li {
-    display: inline;
+    margin-inline-end: auto;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #0d3e0e;
-    font-size: 30px;
-   
+    font-size: 40px;
     transition: color 0.3s;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 100;
 }
 
 .nav-links a:hover {
     color: #233822;
 }
 
-/* Shopping cart placering */
+
 .cart-icon {
-    font-size: 24px;
+    font-size: 36px;
     cursor: pointer;
-    margin-left: auto; /* Skubber ikonet helt til højre */
+    margin-right: 40px; /* Justere lidt afstand fra højre kant */
 }
 
 .cart-icon:hover {
     color: #ffcc00;
 }
 
-.beerikon{
-    width: 30%;
+.faelleskab{
+    width: 100%;
     position: relative;
     top: 200px;
+   
 }
 
+
+.ol1{
+    width: 15%;
+    margin-top: 450px;
+    transform: rotate(-10deg); /* Drejer billedet lidt */
+    padding: 20px;
+    
+   
+}
+
+.ol2{
+    width: 15%;
+    margin-top: 450px;
+    transform: rotate(10deg); /* Drejer billedet lidt */
+    padding: 20px;
+   
+}
+.pilned{
+    margin-top: 250px;
+    
+}
 
 .slider{
     top: 300px;
     position: relative;
+
 }
 
 
@@ -104,14 +140,75 @@ h2 {
     align-items: center;
     padding: 50px;
 }
+
+/*pillene til højre og venstre*/
 .arrow {
-    font-size: 30px;
+    font-size: 50px;
     cursor: pointer;
     margin: 0 20px;
     color: darkgreen;
 }
 
 .text {
-    font-size: 24px;
+    font-size: 30px;
     width: 500px;
+    font-family: "Jost", sans-serif;
+    
+}
+
+.flexcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 300px;
+    margin-top: -200px;
+}
+
+
+.community-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 50px auto;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.image-container img {
+    width: 465px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.text-box {
+    background-color: #e69a45;
+    padding: 20px;
+    border-radius: 50px;
+    max-width: 500px;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-sizing: border-box;
+    color: black;
+    word-wrap: break-word;
+    overflow: visible; /* Tillader boksen at udvide sig efter indhold */
+    display: block; /* Sørger for, at boksen vokser efter teksten */
+}
+
+.text-box h2 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.text-box p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.author {
+    font-weight: bold;
+    text-align: right;
 }

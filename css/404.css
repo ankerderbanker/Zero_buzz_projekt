@@ -1,0 +1,119 @@
+/* Main Content (Navbar + Page Content) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #faf9f6;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #faf9f6;
+    padding: 15px 20px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+    width: 100%;
+    position: relative; /* Positioned normally */
+    margin-top: -1px; /* Ensure it stays immediately below the video */
+    z-index: 10;
+}
+
+/* Position the navbar directly below the video */
+#main-content {
+    margin-top: 0; /* Resetting margin-top */
+}
+
+/* Add a small gap below the video */
+.navbar {
+    margin-top: 10px; /* Adds a small gap below the video */
+}
+
+/* Logo placement */
+.navbar .logo {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+}
+
+#logo {
+    width: 100px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #0d3e0e;
+    font-size: 40px;
+    transition: color 0.3s;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.nav-links a:hover {
+    color: #233822;
+}
+
+.cart-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.cart-icon:hover {
+    color: #ffcc00;
+}
+
+
+
+
+.image-container {
+    position: relative;
+    display: inline-block;
+ 
+  }
+  
+ 
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Text color */
+    font-size: 24px; /* Font size */
+    font-weight: bold; /* Font weight */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional: shadow to improve visibility */
+  }
+
+
+
+.cta-button {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e07b00;
+}
