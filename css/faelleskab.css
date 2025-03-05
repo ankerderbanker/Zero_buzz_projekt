@@ -46,6 +46,7 @@ h3{
     font-size: 50px;
     color: var(--lysgrøn);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   
 }
 
 /* Styler overskrift "Drik smart.." */
@@ -222,6 +223,7 @@ h4{
     margin: 50px auto;
     border-radius: 15px;
     padding: 20px;
+   
 }
 
 /* Styling og placering af billederne til hver historie*/
@@ -264,15 +266,16 @@ h4{
 
 
 /* Styling af infographic størrelse*/
-.infographic{
+.infographic {
     width: 25%;
     margin-bottom: 50px;
 }
 
-.infographicbox{
-    margin-top: 500px;
-}
 
+.infographicbox {
+display: block;
+margin-top: 150px;
+}
 
 /* Styling og placering af footer - hele boksen*/
 .footer-content {
