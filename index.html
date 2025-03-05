@@ -32,9 +32,9 @@
           </div>
 
           <ul class="nav-links">
-              <li><a href="beerdesign.html">Shop</a></li>
-              <li><a href="404.html">Om Os</a></li>
-              <li><a href="faelleskab.html">Fællesskab</a></li>
+              <li><a href="beerdesign.html">SHOP</a></li>
+              <li><a href="404.html">OM OS</a></li>
+              <li><a href="faelleskab.html">FÆLLESSKAB</a></li>
           </ul>
           <div class="cart-icon">
               <i class="fas fa-shopping-cart"></i>
@@ -79,25 +79,34 @@
 
 
 
+    <div class="grid">
+        <div class="image-box">
+            <img src="images/baalaften.jpg" class="image1">
+            <img src="images/Festnytår.jpg" class="image1">
+            <div class="hashtag">#Inspiration</div>
+        </div>
 
 
-    <div class="grid-container">
-        <!-- Image and Text Pair 1 -->
-        <div class="grid-item text">“Good beer, good times.”</div>
-        <div class="grid-item image">
-            <img src="images/Festnytår.jpg" alt="Instagram Post">
-            <div class="hashtag-overlay">#ZeroBuzz</div>
+        <div class="text-box">"Believe in yourself!"</div>
+        <div class="image-box">
+            <img src="images/baalaften.jpg" class="image1">
+            <img src="images/Festnytår.jpg" class="image1">
+            <div class="hashtag">#Inspiration</div>
         </div>
-    
-        <!-- Image and Text Pair 2 -->
-        <div class="grid-item text">“No buzz, just flavor!”</div>
-        <div class="grid-item image">
-            <img src="images/olhjerte.jpg" alt="Instagram Post">
-            <div class="hashtag-overlay">#CraftedWithCare</div>
+
+
+        <div class="text-box">"Believe in yourself!"</div>
+
+
+
+        <div class="text-box">"Success is a journey, not a destination."</div>
+        <div class="image-box">
+            <img src="images/Festnytår.jpg" class="image2">
+            <img src="images/laerke.png" class="image2">
+            <div class="hashtag">#Motivation</div>
         </div>
-    
-        <!-- Add more image and text pairs as needed -->
     </div>
+
 
 </body>
 
@@ -135,31 +144,47 @@
 </footer>
 
 
+<script>
+    function switchImages(className) {
+        const images = document.querySelectorAll('.' + className);
+        let index = 0;
+        setInterval(() => {
+            images.forEach(img => img.style.opacity = '0');
+            images[index].style.opacity = '1';
+            index = (index + 1) % images.length;
+        }, 3000);
+    }
+    switchImages('image1');
+    switchImages('image2');
+</script>
 
-
-
-
-
-
+<!-- Navbar sticky efter video-->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    let imageItems = document.querySelectorAll(".grid-item.image");
-  
-    imageItems.forEach((item, index) => {
-        let images = item.querySelectorAll("img");
-        let currentIndex = 0;
-      
-        function changeImage() {
-            images.forEach(img => img.style.display = "none");
-            images[currentIndex].style.display = "block"; // Show the current image
-            currentIndex = (currentIndex + 1) % images.length; // Move to the next image
-        }
+    const navbar = document.getElementById("navbar");
+    const introVideo = document.querySelector(".intro-video");
+    const navbarHeight = navbar.offsetHeight; // Get navbar height
 
-        setInterval(changeImage, 3000); // Change every 3 seconds
-        changeImage(); // Initialize
+    window.addEventListener("scroll", function () {
+        if (window.scrollY >= introVideo.offsetHeight) {
+            navbar.style.position = "fixed";
+            navbar.style.top = "0";
+            navbar.style.width = "100%";
+            navbar.style.zIndex = "1000";
+            navbar.style.boxShadow = "0px 4px 10px rgba(0,0,0,0.1)";
+            document.body.style.paddingTop = `${navbarHeight}px`; // Add padding to prevent jump
+        } else {
+            navbar.style.position = "relative";
+            document.body.style.paddingTop = "0"; // Remove padding when back to normal
+        }
     });
 });
 </script>
+
+
+
+<!-- instagram grid -->
+
 
 
     

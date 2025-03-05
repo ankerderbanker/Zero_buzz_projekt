@@ -154,7 +154,7 @@ h4{
 .text-overlay {
     position: absolute;
     top: 60%;
-    left: 666px;
+    left: 48%;
     transform: translate(-50%, -50%); /* Center the text exactly */
     color: white; /* Text color */
     font-size: 24px; /* Font size */
