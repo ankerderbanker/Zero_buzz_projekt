@@ -6,6 +6,7 @@
     <title>Beer Designer</title>
     <link rel="stylesheet" href="css/css.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     
 </head>
 <body>
@@ -22,6 +23,7 @@
     </div> 
   </div>
 
+  
   <!-- Main Content (Navbar + Page Content) -->
   <div id="main-content">
       <nav class="navbar" id="navbar">
@@ -41,9 +43,13 @@
       
       <div class="content">
           <h2>Velkommen til Zero Buzz Brew</h2>
-          <p>Mere end bare en alkoholfriøl – opdag et fællesskab, der deler gode øjeblikke sammen.</p>
+          <h3>Mere end bare en alkoholfriøl</h3>
+            <p>Hos Zero Buzz Brew tror vi på, at gode øjeblikke fortjener en drik, der passer til dem. <br>
+            Opdag et fællesskab, der deler gode øjeblikke uden alkohol sammen. <br>
+            Tryk på knappen for at læse mere om fælleskabet, der findes ved at drikke Zero Buzz Brew <br>
+          </p>
           <a href="faelleskab.html">
-          <button class="cta-button"> Join fælleskabet</button>
+          <button class="cta-button"> Gå til fælleskabet</button>
         </a>
       </div>
 
@@ -72,70 +78,90 @@
     </div>
 
 
-<!-- Grid of 8 Squares -->
-<div class="grid-container">
-    <!-- Instagram Images (Slideshow effect) -->
-    <div class="grid-item instagram">
-        <img src="images/smagikoner/citrus.png" class="slideshow" alt="Instagram Post">
-        <div class="hashtag-overlay">#ZeroBuzz</div>
-    </div>
-    <div class="grid-item instagram">
-        <img src="images/logonew1dark.png" class="slideshow" alt="Instagram Post">
-        <div class="hashtag-overlay">#CraftedWithCare</div>
-    </div>
-    
-    <!-- Quote Boxes -->
-    <div class="grid-item quote" style="background-color: #ffcc00;">“Good beer, good times.”</div>
-    <div class="grid-item quote" style="background-color: #ff5733;">“No buzz, just flavor!”</div>
-    
-    <!-- More Instagram Images -->
-    <div class="grid-item instagram">
-        <img src="images/insta3.jpg" class="slideshow" alt="Instagram Post">
-        <div class="hashtag-overlay">#DrinkDifferent</div>
-    </div>
-    <div class="grid-item instagram">
-        <img src="images/insta4.jpg" class="slideshow" alt="Instagram Post">
-        <div class="hashtag-overlay">#ZeroAlcohol</div>
-    </div>
-    
-    <!-- More Quote Boxes -->
-    <div class="grid-item quote" style="background-color: #33b5e5;">“Refreshing and alcohol-free.”</div>
-    <div class="grid-item quote" style="background-color: #8e44ad;">“Join the Zero Buzz community!”</div>
-</div>
 
-  </div>
 
+
+    <div class="grid-container">
+        <!-- Image and Text Pair 1 -->
+        <div class="grid-item text">“Good beer, good times.”</div>
+        <div class="grid-item image">
+            <img src="images/Festnytår.jpg" alt="Instagram Post">
+            <div class="hashtag-overlay">#ZeroBuzz</div>
+        </div>
+    
+        <!-- Image and Text Pair 2 -->
+        <div class="grid-item text">“No buzz, just flavor!”</div>
+        <div class="grid-item image">
+            <img src="images/olhjerte.jpg" alt="Instagram Post">
+            <div class="hashtag-overlay">#CraftedWithCare</div>
+        </div>
+    
+        <!-- Add more image and text pairs as needed -->
+    </div>
 
 </body>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        let slides = document.querySelectorAll(".slideshow");
-        let currentIndex = 0;
-        
-        function changeSlide() {
-            slides.forEach(slide => slide.style.display = "none");
-            slides[currentIndex].style.display = "block";
-            currentIndex = (currentIndex + 1) % slides.length;
-        }
-        
-        setInterval(changeSlide, 3000); // Change every 3 seconds
-        changeSlide(); // Initialize
-    });
-</script>
-
-
-
-
-<footer class="footer">
+<!-- Footer begynder her-->
+<footer>
     <div class="footer-content">
+        <!-- venstre sektion -->
         <div class="footer-left">
-            <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+            <h5>ZERO BUZZ BREW</h5>
+            <h6>Kontakt os her:</h6>
+            <p>Email: zerobuzzbrew@gmail.com</p>
+            <p>+45 50 40 30 20<p>
         </div>
+
+        <!-- Center sektion -->
+<div class="nedwrapper">
+<a href=""><i class="fab fa-facebook-square share"></i></a>
+<a href=""><i class="fab fa-instagram-square share"></i></a>
+<a href=""><i class="fab fa-linkedin share"></i></a>
+
+
+
+<div class="footer-center">
+ <p>© 2025 Zero Buzz. Alle rettigheder forbeholdes.</p>
+</div>
+
+ </div>
+       
+
+        <!-- højre sektion -->
         <div class="footer-right">
-            <img src="images/logonew1dark.png" alt="Zero Buzz Logo" class="footer-logo">
+            <img src="images/logolys.png" alt="Zero Buzz Logo" class="footer-logo">
         </div>
     </div>
 </footer>
+
+
+
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    let imageItems = document.querySelectorAll(".grid-item.image");
+  
+    imageItems.forEach((item, index) => {
+        let images = item.querySelectorAll("img");
+        let currentIndex = 0;
+      
+        function changeImage() {
+            images.forEach(img => img.style.display = "none");
+            images[currentIndex].style.display = "block"; // Show the current image
+            currentIndex = (currentIndex + 1) % images.length; // Move to the next image
+        }
+
+        setInterval(changeImage, 3000); // Change every 3 seconds
+        changeImage(); // Initialize
+    });
+});
+</script>
+
+
+    
 
 </html>

@@ -4,6 +4,16 @@ html, body {
     overflow-x: hidden;
 }
 
+:root{
+    --mørkgrøn: #233822;
+    --lysgrøn: #325031;
+    --orange: #DD9C00;
+    --gul: #FDFF33;
+    --hyldefarve: #FFE982;
+    --beige: #C1A96D;
+    --hvid: #EFEADA;
+    
+}
 
 .intro-video {
     position: relative;
@@ -21,6 +31,8 @@ html, body {
     object-fit: cover; /* Ensures video covers the full screen */
     object-position: center; /* Centers the video */
 }
+
+
 
 .overlay {
     position: absolute;
@@ -124,6 +136,7 @@ html {
     font-size: 24px;
     cursor: pointer;
     margin-left: auto;
+   
 }
 
 .cart-icon:hover {
@@ -137,8 +150,15 @@ html {
 }
 
 .content h2 {
-    font-size: 25px;
-    color: #0a480b;
+    font-size: 45px;
+    color: var(--mørkgrøn);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.content h3 {
+    font-size: 20px;
+    color: var(--mørkgrøn);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .content p {
@@ -156,6 +176,9 @@ html {
         font-size: 30px; /* Adjusting arrow size for smaller screens */
     }
 }
+
+
+
 
 
 
@@ -197,47 +220,6 @@ html {
 
 
 
-.footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #111111;
-    padding: 20px;
-    box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.1);
-}
-
-.footer-content {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-left p {
-    margin: 0;
-    font-size: 16px;
-    color: #0d3e0e;
-}
-
-.footer-left a {
-    color: #0d3e0e;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.footer-left a:hover {
-    color: #ffcc00;
-}
-
-.footer-logo {
-    width: 120px; /* Adjust size as needed */
-    height: auto;
-}
-
-
-
-
-
 .cta-button {
     background-color: #0d3e0e;
     color: white;
@@ -250,6 +232,9 @@ html {
 .cta-button:hover {
     background-color: #233822;
 }
+
+
+/* Instagram grid begynder her */
 
 .grid-container {
     display: grid;
@@ -287,4 +272,98 @@ html {
     padding: 5px 10px;
     color: white;
     font-size: 14px;
+}
+
+
+
+
+/* Styling og placering af footer - hele boksen*/
+.footer-content {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #EFEADA;
+    box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    margin-top: 100px;
+}
+
+/* Styling og placering af footer delen til venstre*/
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 30px;
+}
+
+/* Styling og placering af overskriften "Zero buzz brew" i footer delen til venstre*/
+.footer-left h5 {
+    margin: 0;
+    font-size: 30px;
+    color: #0d3e0e;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Styling og placering af overskriften "Kontakt os her:" i footer delen til venstre*/
+.footer-left h6 {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #0d3e0e;
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+}
+
+/* Styling og placering af teksten i footer delen til venstre*/
+.footer-left p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #0d3e0e;
+    font-family: "Jost", sans-serif;
+}
+
+/* Styling og placering af box, så socialemedier-ikoner står over tekst*/
+.nedwrapper {
+    display: block;
+    font-size: 50px;
+    color: #0a480b;
+    margin-right: 70px;
+  
+   
+}
+
+/* farve på fontawesome ikoner */
+.nedwrapper a {
+    color: #0a480b;
+   
+}
+
+/* Styling og placering af footer delen i midten*/
+.footer-center {
+    text-align: center;
+  
+}
+
+/* Styling og placering af teksten i footer delen i midten*/
+.footer-center p {
+    margin: 0;
+    font-size: 16px;
+    color: #0d3e0e;
+    font-family: "Jost", sans-serif;
+    
+}
+
+/* Styling og placering af footer delen højre*/
+.footer-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Styling og placering af logo i footer*/
+.footer-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 60px;
+    margin-left: 110px;
 }

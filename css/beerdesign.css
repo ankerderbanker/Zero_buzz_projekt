@@ -5,8 +5,19 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-   
+   overflow-x: hidden;
     transition: opacity 0.5s ease-in-out;
+}
+
+:root{
+    --mørkgrøn: #233822;
+    --lysgrøn: #325031;
+    --orange: #DD9C00;
+    --gul: #FDFF33;
+    --hyldefarve: #FFE982;
+    --beige: #C1A96D;
+    --hvid: #EFEADA;
+    
 }
 
 h1 {
@@ -25,69 +36,77 @@ h2 {
     
 }
 
+
 /* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #faf9f6;
-    padding: 15px 20px;
-    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+    background: #EFEADA;
+    padding: 15px 20px; 
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
-    position: relative; /* Positioned normally */
-    margin-top: -1px; /* Ensure it stays immediately below the video */
-    z-index: 10;
+    position: fixed; /* Changed from sticky to fixed */
+    top: 0; /* Sticks it to the top of the page */
+    left: 0; /* Ensure it's fully aligned with the left edge */
+    z-index: 10; /* Ensure the navbar stays above other content */
 }
 
 /* Position the navbar directly below the video */
 #main-content {
-    margin-top: 0; /* Resetting margin-top */
+    margin-top: 0;
 }
 
 /* Add a small gap below the video */
 .navbar {
-    margin-top: 10px; /* Adds a small gap below the video */
+    margin-top: 0; 
 }
 
 /* Logo placement */
 .navbar .logo {
     display: flex;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
 
 }
 
+/* Styler logo */
 #logo {
-    width: 100px; /* Adjust width as needed */
+    width: 60px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 50px;
-    margin-left: 30px;
+    gap: 70px;
+    margin-inline-end: auto;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #0d3e0e;
-    font-size: 40px;
+    font-size: 25px;
     transition: color 0.3s;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
 }
 
 .nav-links a:hover {
     color: #233822;
 }
 
+/* Styler og placerer indkøbskurvikon */
 .cart-icon {
-    font-size: 24px;
+    font-size: 36px;
     cursor: pointer;
-    margin-left: auto;
+    margin-right: 60px; /* Justere lidt afstand fra højre kant */
+    color: var(--lysgrøn);
 }
 
+/* Giver indkøbskurv hover effekt */
 .cart-icon:hover {
     color: #ffcc00;
 }
@@ -161,9 +180,11 @@ button {
 
 
 #addToCartBtn {
-    background-color: #c7c7c7;
+    background-color: var(--lysgrøn);
     width: 150px;
     margin-left: 50%;
+    margin-top: 20px;
+    color: #EFEADA;
 }
 
 button:hover {
@@ -185,6 +206,9 @@ select {
     border-radius: 5px;
     border: 1px solid #ccc;
     cursor: pointer;
+    background-color: #EFEADA;
+    color: var(--lysgrøn);
+   
     
 }
    
@@ -205,7 +229,7 @@ select {
 
 
 .selectorflexbox {
-    margin-left: 120px;
+    margin-left: 180px;
     display: flex;
 }
 
@@ -214,7 +238,9 @@ select {
     margin-left: 10%;   /* Remove any left margin */
     display: flex;
     flex-direction: column;
+    width: 220px;
     align-items: flex-start; /* Align all items to the left */
+    
 }
 
 .QuoteSelection h2 {
@@ -226,12 +252,104 @@ select {
 .QuantitySelection h2 {
     margin-left: -15px;  /* Remove any default margins */
     padding-bottom: 10px; /* Optional: Add space between the heading and dropdown */
+    width: 100px;
 }
-
-
 
 
 .FlavorSelection h2 {
 font-size: xx-large;
 margin-left: 25%;
+}
+
+
+
+/* Styling og placering af footer - hele boksen*/
+.footer-content {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #EFEADA;
+    box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    margin-top: 100px;
+}
+
+/* Styling og placering af footer delen til venstre*/
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 30px;
+}
+
+/* Styling og placering af overskriften "Zero buzz brew" i footer delen til venstre*/
+.footer-left h5 {
+    margin: 0;
+    font-size: 30px;
+    color: #0d3e0e;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Styling og placering af overskriften "Kontakt os her:" i footer delen til venstre*/
+.footer-left h6 {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #0d3e0e;
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+}
+
+/* Styling og placering af teksten i footer delen til venstre*/
+.footer-left p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #0d3e0e;
+    font-family: "Jost", sans-serif;
+}
+
+/* Styling og placering af box, så socialemedier-ikoner står over tekst*/
+.nedwrapper {
+    display: block;
+    font-size: 50px;
+    color: #0a480b;
+    margin-right: 70px;
+  
+   
+}
+
+/* farve på fontawesome ikoner */
+.nedwrapper a {
+    color: #0a480b;
+   
+}
+
+/* Styling og placering af footer delen i midten*/
+.footer-center {
+    text-align: center;
+  
+}
+
+/* Styling og placering af teksten i footer delen i midten*/
+.footer-center p {
+    margin: 0;
+    font-size: 16px;
+    color: #0d3e0e;
+    font-family: "Jost", sans-serif;
+    
+}
+
+/* Styling og placering af footer delen højre*/
+.footer-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Styling og placering af logo i footer*/
+.footer-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 60px;
+    margin-left: 110px;
 }
