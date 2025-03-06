@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beer Designer</title>
+    <title>Zero Buzz Brew | Vælg din øl</title>
     <link rel="stylesheet" href="css/beerdesign.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
+    
+    <!-- Meta Information -->
+    <meta name="title" content="Zero Buzz Brew | Vælg din øl">
+    <meta name="description" content="Siden viser muligheden for at vælge din egen øl, alt efter smag og citat.">
+    <meta name="keywords" content="zero buzz brew, vælg, smag, kurv, citat, antal, citrus, appelsin, hyldeblomst, klassisk">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
 </head>
 <body>
 
-<!-- Menubar-->
+<!-- Navbar -->
 <header>    
     <nav class="navbar" id="navbar">
         <div class="logo">
-            <a href="index.html"><img src="images/logolys.png" alt="Zero Buzz Logo" id="logo"></a>
+            <a href="index.html#logo"><img src="images/logolys.png" alt="Zero Buzz Logo" id="logo"></a>
         </div>
 
         <ul class="nav-links">
@@ -22,28 +28,29 @@
             <li><a href="404.html">OM OS</a></li>
             <li><a href="faelleskab.html">FÆLLESSKAB</a></li>
         </ul>
+        
         <div class="cart-icon">
             <i class="fas fa-shopping-cart"></i>
         </div>
     </nav>
 </header>
 
-
 <div class="PageWrapper">
-
     <h1>VÆLG DIN ZERO BUZZ BREW</h1>
 
     <div class="DesignFlexWrapper">
+        
+        <!-- Cirkel -->
+        <img src="images/cirkelol.png" alt="cirkelbaggrund" class="cirkel">
 
         <!-- Øl billede -->
         <div class="BeerContainer">
             <img class="beerimg" id="beerImage" src="images/ol/ol1hylde.png" alt="Øl billede">
-
         </div>
 
         <!-- Valgmuligheder -->
         <div class="SelectionWrapper">
-            
+
             <!-- Smagsvalg -->
             <div class="FlavorSelection">
                 <h2>Vælg din smag</h2>
@@ -51,94 +58,85 @@
                     <img src="images/smagikoner/citrus.png" alt="Citrus"> Citrus
                 </button>
                 <button class="flavor-btn" data-flavor="appelsin">
-                    <img src="images/smagikoner/appelsin.png" alt="appelsin"> Appelsin
+                    <img src="images/smagikoner/appelsin.png" alt="Appelsin"> Appelsin
                 </button>
                 <button class="flavor-btn" data-flavor="hylde">
-                    <img src="images/smagikoner/hyldeblomst.png" alt="hyldeblomst"> Hyldeblomst
+                    <img src="images/smagikoner/hyldeblomst.png" alt="Hyldeblomst"> Hyldeblomst
                 </button>
                 <button class="flavor-btn" data-flavor="klassisk">
-                    <img src="images/smagikoner/klassiskol.png" alt="klassisk"> Klassisk
+                    <img src="images/smagikoner/klassiskol.png" alt="Klassisk"> Klassisk
                 </button>
             </div>
 
-
-
-
+            <!-- Selector Flexbox -->
             <div class="selectorflexbox">
+                
+                <!-- Citatvalg -->
+                <div class="QuoteSelection">
+                    <h2>Vælg citat</h2>
+                    <select id="quoteSelect">
+                        <option value="1">Den smager godt</option>
+                        <option value="2">Jeg kan også uden</option>
+                        <option value="3">Jeg kører hjem</option>
+                        <option value="4">Jeg skal præstere</option>
+                    </select>
+                </div>
 
-                   <!-- Citatvalg -->
-            <div class="QuoteSelection">
-                <h2>Vælg citat</h2>
-                <select id="quoteSelect">
-                    <option value="1">Den smager godt</option>
-                    <option value="2">Jeg kan også uden</option>
-                    <option value="3">Jeg kører hjem</option>
-                    <option value="4">Jeg skal præstere</option>
-                </select>
-            </div>
-
-            <!-- Antal valg -->
-            <div class="QuantitySelection">
-                <h2>Vælg antal</h2>
-                <select id="quantitySelect">
-                    <option value="1">1x</option>
-                    <option value="3">3x</option>
-                    <option value="6">6x</option>
-                </select>
-            </div>
+                <!-- Antal valg -->
+                <div class="QuantitySelection">
+                    <h2>Vælg antal</h2>
+                    <select id="quantitySelect">
+                        <option value="1">1x</option>
+                        <option value="3">3x</option>
+                        <option value="6">6x</option>
+                    </select>
+                </div>
 
             </div>
-         
+            
             <!-- Læg i kurv -->
             <button id="addToCartBtn">Læg i kurv</button>
-
         </div>
 
     </div>
 </div>
 
-
-<!-- Footer begynder her-->
+<!-- Footer -->
 <footer>
     <div class="footer-content">
-        <!-- venstre sektion -->
+
+        <!-- Venstre Sektion -->
         <div class="footer-left">
             <h5>ZERO BUZZ BREW</h5>
             <h6>Kontakt os her:</h6>
             <p>Email: zerobuzzbrew@gmail.com</p>
-            <p>+45 50 40 30 20<p>
+            <p>+45 50 40 30 20</p>
         </div>
 
-        <!-- Center sektion -->
-<div class="nedwrapper">
-<a href=""><i class="fab fa-facebook-square share"></i></a>
-<a href=""><i class="fab fa-instagram-square share"></i></a>
-<a href=""><i class="fab fa-linkedin share"></i></a>
-
-
-
-            <div class="footer-center">
-                <p>© 2025 Zero Buzz. Alle rettigheder forbeholdes.</p>
+        <!-- Midter Sektion -->
+        <div class="footer-center">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-square share"></i></a>
+                <a href="#"><i class="fab fa-instagram-square share"></i></a>
+                <a href="#"><i class="fab fa-linkedin share"></i></a>
             </div>
+            <p>© 2025 Zero Buzz. Alle rettigheder forbeholdes.</p>
+        </div>
 
-         </div>
-       
-
-        <!-- højre sektion -->
+        <!-- Højre Sektion -->
         <div class="footer-right">
             <img src="images/logolys.png" alt="Zero Buzz Logo" class="footer-logo">
         </div>
+
     </div>
 </footer>
 
-
-
-
+<!-- JavaScript -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    let selectedFlavor = "citrus"; // Standard smag
-    let selectedQuote = "1"; // Standard citat
-    let selectedQuantity = "1"; // Standard antal
+    let selectedFlavor = "citrus"; 
+    let selectedQuote = "1"; 
+    let selectedQuantity = "1"; 
 
     const beerImage = document.getElementById("beerImage");
     const flavorButtons = document.querySelectorAll(".flavor-btn");
@@ -146,13 +144,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const quantitySelect = document.getElementById("quantitySelect");
     const addToCartBtn = document.getElementById("addToCartBtn");
 
-    // Funktion til at opdatere billedet
+    // opdater øl
     function updateBeerImage() {
         const newImageSrc = `images/ol/ol${selectedQuote}${selectedFlavor}.png`;
         beerImage.src = newImageSrc;
     }
 
-    // Event listeners for smagsvalg
+    // Check for smag
     flavorButtons.forEach(button => {
         button.addEventListener("click", function () {
             selectedFlavor = this.getAttribute("data-flavor");
@@ -160,18 +158,18 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Event listener for citatvalg fra dropdown
+    //  check for citat
     quoteSelect.addEventListener("change", function () {
         selectedQuote = this.value;
         updateBeerImage();
     });
 
-    // Event listener for antalvalg
+    // Check for antal 
     quantitySelect.addEventListener("change", function () {
         selectedQuantity = this.value;
     });
 
-    // Event listener for "Læg i kurv"-knap
+    // Alert pop up "Tilføj til kurv" knap
     addToCartBtn.addEventListener("click", function () {
         alert(`Du har tilføjet ${selectedQuantity} stk af øllen med smag: ${selectedFlavor} og citat nr. ${selectedQuote} til kurven.`);
     });

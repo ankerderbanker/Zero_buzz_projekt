@@ -1,177 +1,180 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faelleskab</title>
+    <title>Zero Buzz Brew | Fællesskab</title>
     <link rel="stylesheet" href="css/faelleskab.css">
 
-    <!--link til font-awesome - pilene  + sociale medier ikoner -->
+    <!-- Meta Tags -->
+    <meta name="title" content="Zero Buzz Brew | Fællesskab">
+    <meta name="description" content="Fællesskabssiden fortæller understreger vigtigheden i at drikke alkoholfrit, samt fortæller andres historier omkring hvad det har gjort for deres fælleskab.">
+    <meta name="keywords" content="Fælleskab, sammenhold, alkohol, alkoholfri, gode grunde, andres historie, alkoholfri, zero buzz brew, sociale,">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <!-- Font Awesome for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    
-    
-    <!--link til font-->
+
+    <!-- Google Fonts -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
-        </style>
+    </style>
 </head>
+
 <body>
 
-<!-- Menubar-->
-<header>    
-    <nav class="navbar" id="navbar">
-        <div class="logo">
-            <a href="index.html"><img src="images/logolys.png" alt="Zero Buzz Logo" id="logo"></a>
+    <!-- Menubar -->
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="logo">
+                <a href="index.html#logo"><img src="images/logolys.png" alt="Zero Buzz Logo" id="logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="beerdesign.html">SHOP</a></li>
+                <li><a href="404.html">OM OS</a></li>
+                <li><a href="faelleskab.html">FÆLLESSKAB</a></li>
+            </ul>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Banner -->
+    <section class="sammenhold">
+        <h1> Sammenhold er vigtigere end alkohol </h1>
+        <img src="images/cirkelol.png" alt="cirkelbaggrund" class="cirkel">
+        <img src="images/olhnderlang.png" alt="faelleskab" class="faelleskab">
+        <div class="pilned">
+            <i class="fas fa-chevron-down"></i>
         </div>
-
-        <ul class="nav-links">
-            <li><a href="beerdesign.html">SHOP</a></li>
-            <li><a href="404.html">OM OS</a></li>
-            <li><a href="faelleskab.html">FÆLLESSKAB</a></li>
-        </ul>
-        <div class="cart-icon">
-            <i class="fas fa-shopping-cart"></i>
-        </div>
-    </nav>
-</header>
-
-<!-- Overskrift på siden + billede af to der skåler-->
-<section>
-    <h1> Sammenhold er vigtigere end alkohol </h1>
-    <img src="images/olhnderlang.png" alt="faelleskab" class="faelleskab">
-    <div class="pilned"><i class="fas fa-chevron-down"></i></div>
-</section>
-
-<!-- Her er slider baren med 10 gode grunde til at drikke alkoholfri-->
-<section class="flexcontainer">
-    <img src="/images/ol/ol4klassisk.png" alt="ol1" class="ol1">
-    
-    <section class="slider">
-    <h2>10 gode grunde til at drikke alkoholfri</h2>
-    <div class="container">
-        <div class="arrow" onclick="prevText()"><i class="fas fa-chevron-left"></i></div>
-        <div class="text" id="text">1. Du vil ikke have tømmermænd dagen efter</div>
-        <div class="arrow" onclick="nextText()"><i class="fas fa-chevron-right"></i></div>
-    </div>
     </section>
-    <img src="/images/ol/ol2citrus.png" alt="ol2" class="ol2">
-</section>
 
-<!-- Her er tekstbox + billed af karl og hans historie-->
- <h2>HØR ANDRES HISTORIE</h2>
-<section class="community-section">
-    <div class="image-container">
-        <img src="images/karl.png" alt="eksempler"/>
+    <!-- Slider for 10 gode grunde -->
+    <div class="flexcontainer">
+        <img src="/images/ol/ol4klassisk.png" alt="ol1" class="ol1">
+
+        <section class="slider">
+            <h2>10 gode grunde til at drikke alkoholfri</h2>
+            <div class="container">
+                <div class="arrow" onclick="prevText()">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="text" id="text">1. Du vil ikke have tømmermænd dagen efter</div>
+                <div class="arrow" onclick="nextText()">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </section>
+        <img src="/images/ol/ol2citrus.png" alt="ol2" class="ol2">
     </div>
-    <div class="text-box">
-        <p>
-            Jeg valgte at droppe alkoholen. Ikke fordi jeg skulle, men fordi jeg gerne ville huske aftenerne og være til stede. 
-            Først var jeg nervøs for, om folk ville se mig som kedelig, men mine venner tog det overraskende godt.
-            Jeg grinede lige så højt, dansede lige så vildt og havde de bedste samtaler – nu bare uden hovedpine dagen efter. 
-            Det gik hurtigt op for mig, at det ikke var alkoholen, men fællesskabet, der gjorde aftenerne mindeværdige.
-            For sammenhold har aldrig handlet om procenterne, men om dem, man skåler med."
-        </p>
-        <p class="author">- Karl Lucas Cristiansen, 24</p>
-    </div>
-</section>
 
-<!-- Her er tekstbox + billed af Lærke og hendes historie-->
-<section class="community-section">
-    <div class="text-box">
-        <p>
-            "Førhen følte jeg ofte et pres fra mine venner til at drikke alkohol – ikke fordi de ville mig 
-            noget dårligt, men fordi det bare var en del af det sociale. 
-            Jeg sagde ja, selv når jeg egentlig ikke havde lyst, for jeg ville ikke være den, 
-            der skilte sig ud. Men jeg har indset, at jeg ikke behøver alkohol for at være en 
-            del af fællesskabet. Jeg kan stadig have det sjovt, danse og være med i alle de gode øjeblikke 
-            – bare på mine egne præmisser. Mine venner forstår og respekterer det nu, og det føles virkelig godt
-             at stå ved mig selv."
-        </p>
-        <p class="author">- Lærke Amailie Jensen, 24</p>
-    </div>
-    <div class="image-container">
-        <img src="images/laerke.png" alt="eksempler"/>
-    </div>
-</section>
-
-<!-- Her indsættes infographic-->
-<div class="infographicbox">
-    <h3>En farlig cocktail</h3>
-    <h4>Drik smart - vælg alkoholfri <br> og undgå de alvorlige konsekvenser ved alkohol</h4>
-    <img src="/images/infographic.png" alt="infographic" class="infographic">
-
-</div>
-
-
-</body>
-
-<!-- Footer begynder her-->
-<footer>
-    <div class="footer-content">
-        <!-- venstre sektion -->
-        <div class="footer-left">
-            <h5>ZERO BUZZ BREW</h5>
-            <h6>Kontakt os her:</h6>
-            <p>Email: zerobuzzbrew@gmail.com</p>
-            <p>+45 50 40 30 20<p>
+    <!-- Hør andres historie Sektion -->
+    <h2>HØR ANDRES HISTORIE</h2>
+    <div class="community-section">
+        <div class="image-container">
+            <img src="images/karl.png" alt="eksempler" >
         </div>
+        <div class="text-box">
+            <p>
+                "Jeg valgte at droppe alkoholen. Ikke fordi jeg skulle, men fordi jeg gerne ville huske aftenerne og være til stede. 
+                Først var jeg nervøs for, om folk ville se mig som kedelig, men mine venner tog det overraskende godt.
+                Jeg grinede lige så højt, dansede lige så vildt og havde de bedste samtaler – nu bare uden hovedpine dagen efter. 
+                Det gik hurtigt op for mig, at det ikke var alkoholen, men fællesskabet, der gjorde aftenerne mindeværdige.
+                For sammenhold har aldrig handlet om procenterne, men om dem, man skåler med."
+            </p>
+            <p class="author">- Karl Lucas Cristiansen, 24</p>
+        </div>
+    </div>
 
-        <!-- Center sektion -->
-<div class="nedwrapper">
-<a href=""><i class="fab fa-facebook-square share"></i></a>
-<a href=""><i class="fab fa-instagram-square share"></i></a>
-<a href=""><i class="fab fa-linkedin share"></i></a>
+    <!-- Lærke's historie sektion -->
+    <div class="community-section">
+        <div class="text-box">
+            <p>
+                "Førhen følte jeg ofte et pres fra mine venner til at drikke alkohol – ikke fordi de ville mig 
+                noget dårligt, men fordi det bare var en del af det sociale. 
+                Jeg sagde ja, selv når jeg egentlig ikke havde lyst, for jeg ville ikke være den, 
+                der skilte sig ud. Men jeg har indset, at jeg ikke behøver alkohol for at være en 
+                del af fællesskabet. Jeg kan stadig have det sjovt, danse og være med i alle de gode øjeblikke 
+                – bare på mine egne præmisser. Mine venner forstår og respekterer det nu, og det føles virkelig godt
+                at stå ved mig selv."
+            </p>
+            <p class="author">- Lærke Amailie Jensen, 24</p>
+        </div>
+        <div class="image-container">
+            <img src="images/laerke.png" alt="eksempler" >
+        </div>
+    </div>
 
+    <!-- Infographic Section -->
+    <div class="infographicbox">
+        <h3>En farlig cocktail</h3>
+        <h4>Drik smart - vælg alkoholfri</h4>
+        <img src="/images/infographic.png" alt="infographic" class="infographic">
+    </div>
 
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <!-- Left Section -->
+            <div class="footer-left">
+                <h5>ZERO BUZZ BREW</h5>
+                <h6>Kontakt os her:</h6>
+                <p>Email: zerobuzzbrew@gmail.com</p>
+                <p>+45 50 40 30 20</p>
+            </div>
 
+            <!-- Midter Sektion -->
             <div class="footer-center">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-square share"></i></a>
+                    <a href="#"><i class="fab fa-instagram-square share"></i></a>
+                    <a href="#"><i class="fab fa-linkedin share"></i></a>
+                </div>
                 <p>© 2025 Zero Buzz. Alle rettigheder forbeholdes.</p>
             </div>
 
-         </div>
-       
-
-        <!-- højre sektion -->
-        <div class="footer-right">
-            <img src="images/logolys.png" alt="Zero Buzz Logo" class="footer-logo">
+            <!-- Højre Sektion -->
+            <div class="footer-right">
+                <img src="images/logolys.png" alt="Zero Buzz Logo" class="footer-logo">
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
+    <!-- JavaScript til slideren -->
+    <script>
+        const texts = [
+            "1. Ingen tømmermænd dagen efter",
+            "2. Du sparer penge på drinks",
+            "3. Du kan køre sikkert hjem",
+            "4. Du sover bedre om natten",
+            "5. Du føler dig frisk dagen efter",
+            "6. Din lever vil takke dig",
+            "7. Ingen moralske tømmermænd",
+            "8. Du vil huske hele aftenen",
+            "9. Du kan præstere bedre",
+            "10. Fordi Zero Buzz Brew er en upcoming trend!"
+        ];
 
+        let index = 0;
 
+        function updateText() {
+            document.getElementById("text").innerText = texts[index];
+        }
 
+        function nextText() {
+            index = (index + 1) % texts.length;
+            updateText();
+        }
 
-<script>
-    const texts = [
-        "1. Ingen tømmermænd dagen efter",
-        "2. Du sparer penge på drinks",
-        "3. Du kan køre sikkert hjem",
-        "4. Du sover bedre om natten",
-        "5. Du føler dig frisk dagen efter",
-        "6. Din lever vil takke dig",
-        "7. Ingen moralske tømmermænd",
-        "8. Du vil huske hele aftenen",
-        "9. Du kan præstere bedre",
-        "10. Fordi Zero Buzz Brew er en upcoming trend!"
-    ];
-    
-    let index = 0;
-    
-    function updateText() {
-        document.getElementById("text").innerText = texts[index];
-    }
-    
-    function nextText() {
-        index = (index + 1) % texts.length;
-        updateText();
-    }
-    
-    function prevText() {
-        index = (index - 1 + texts.length) % texts.length;
-        updateText();
-    }
-</script>
+        function prevText() {
+            index = (index - 1 + texts.length) % texts.length;
+            updateText();
+        }
+    </script>
 
+</body>
 
 </html>
